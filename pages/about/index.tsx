@@ -1,27 +1,58 @@
 import React, {FC} from 'react'
-import Layout from '../../components/Layout'
+import Layout from "../../components/Layout";
 import styled from "styled-components";
-import {Animated} from "react-native";
-
+import {useDispatch, useSelector} from 'react-redux'
 
 const About: FC = () => {
+    const state = useSelector(state => state);
+      console.log(state, 'About');
+    return (
+      <Layout>
+          <Content>
+              <h1>The Fortean World Times</h1>
+              <section>
+                  <article className="breaking">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/earth-vs-the-flying-saucers.jpg"
+                           alt="Photograph of a flying saucer over the US Capitol building"/>
+                      <h1>Washington D.C. Attacked By Flying Saucers</h1>
+                      <h2>Dateline Washington D.C.</h2>
+                      <h3>Frank Bragg reporting</h3>
+                      <p>The country was brought to a standstill today when flying saucers – presumably from Mars,
+                          although Venusians have also been suspected – appeared over the nation’s capital, intent on
+                          destruction. Curiously, they only attacked Pennsylvania Avenue, and have not appeared
+                          elsewhere in the country.
+                      </p>
+                  </article>
+                  <article>
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/bigfoot_1.jpg"
+                           alt="Photograph of a Bigfoot"/>
+                      <h1>Bigfoot Found, Shot, Killed</h1>
+                      <h2>Dateline Washington State</h2> <h3>Jessica Walsh reporting</h3>
+                      <p>The first conclusive proof of the elusive Sasquatch was found today, when one of the ape-men
+                          was found and killed by a hunter in the north-eastern corner of the state.
+                          <p>The hunter plans to tour the pelt in the fall.</p></p>
+                  </article>
+                  <article>
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/alligator-sewer_1.jpg"
+                           alt="Photograph of an alligator emerging from an open manhole cover"/>
+                      <h1>Nest of Alligators Found in New York Sewers</h1>
+                      <h2>Dateline New York City</h2>
+                      <h3>Ted Sturgis reporting</h3>
+                      <p>Years of rumours were confirmed yesterday when a nest of alligators were found in the sewers
+                          of New York City, just south of Times Square. The largest, which locals have dubbed “Mugsy”,
+                          measures over 21 feet long.</p>
+                  </article>
+              </section>
 
-  return (
-      <div>
-        Cos’è Lorem Ipsum?
-        Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.
 
-        Perchè lo utilizziamo?
-        È universalmente riconosciuto che un lettore che osserva il layout di una pagina viene distratto dal contenuto testuale se questo è leggibile. Lo scopo dell’utilizzo del Lorem Ipsum è che offre una normale distribuzione delle lettere (al contrario di quanto avviene se si utilizzano brevi frasi ripetute, ad esempio “testo qui”), apparendo come un normale blocco di testo leggibile. Molti software di impaginazione e di web design utilizzano Lorem Ipsum come testo modello. Molte versioni del testo sono state prodotte negli anni, a volte casualmente, a volte di proposito (ad esempio inserendo passaggi ironici).
-
-
-        Da dove viene?
-        Al contrario di quanto si pensi, Lorem Ipsum non è semplicemente una sequenza casuale di caratteri. Risale ad un classico della letteratura latina del 45 AC, cosa che lo rende vecchio di 2000 anni. Richard McClintock, professore di latino al Hampden-Sydney College in Virginia, ha ricercato una delle più oscure parole latine, consectetur, da un passaggio del Lorem Ipsum e ha scoperto tra i vari testi in cui è citata, la fonte da cui è tratto il testo, le sezioni 1.10.32 and 1.10.33 del "de Finibus Bonorum et Malorum" di Cicerone. Questo testo è un trattato su teorie di etica, molto popolare nel Rinascimento. La prima riga del Lorem Ipsum, "Lorem ipsum dolor sit amet..", è tratta da un passaggio della sezione 1.10.32.
-
-        Il brano standard del Lorem Ipsum usato sin dal sedicesimo secolo è riprodotto qui di seguito per coloro che fossero interessati. Anche le sezioni 1.10.32 e 1.10.33 del "de Finibus Bonorum et Malorum" di Cicerone sono riprodotte nella loro forma originale, accompagnate dalla traduzione inglese del 1914 di H. Rackham.
-      </div>
+          </Content>
+      </Layout>
   )
 
 };
+
+const Content = styled.div`
+  padding: ${props => props.theme.spacing([2, 3])};
+`;
 
 export default About;

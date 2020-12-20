@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.5.0",
     "@types/styled-components": "^5.1.5",
     "axios": "^0.21.0",
     "next": "^10.0.3",

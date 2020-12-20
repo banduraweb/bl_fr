@@ -6,6 +6,7 @@ declare module 'styled-components' {
         shapes: {
             borderRadius: string,
         },
+        shadows: string[],
         palette: {
             common: {
                 black: string,

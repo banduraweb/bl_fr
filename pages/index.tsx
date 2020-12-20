@@ -1,11 +1,15 @@
 import React from 'react';
-
-
-import StartPageContainer from './startPage/StartPageContainer'
+import PostList from './postsList/index'
+import {fetchPosts} from "../store/actions/postsActions";
 function HomePage() {
     return (
-        <StartPageContainer/>
+        <PostList/>
     )
 }
+
+HomePage.getInitialProps = async ({ reduxStore }: any) => {
+    return await reduxStore.dispatch(fetchPosts());
+};
+
 
 export default HomePage

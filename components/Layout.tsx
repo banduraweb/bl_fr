@@ -30,10 +30,6 @@ const Layout: FC = ({children, title = 'This is the default title'}: Props) => {
             <Content>
                 {children}
             </Content>
-
-            {/*<Footer>*/}
-            {/*    <span>I'm here to stay (Footer)</span>*/}
-            {/*</Footer>*/}
         </Container>
     )
 };
@@ -61,18 +57,14 @@ const Nav = styled.header`
 `;
 
 const Content = styled.main`
+  display: flex;
+  justify-content: center;
   flex-grow: 8;
-     background-color: ${props => props.theme.palette.common.white};
+  background-color: ${props => props.theme.palette.common.white};
   width: 100%;
-  padding: 60px 0;
+  padding: ${props => props.theme.spacing([3, 0])};
 `;
 
-// const Footer = styled.footer`
-//  flex-grow: 1;
-//   background-color: blue;
-//    width: 100%;
-//   min-height: 60px;
-//   position: fixed;
-// `;
+
 
 export default Layout;
