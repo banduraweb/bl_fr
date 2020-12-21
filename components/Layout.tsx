@@ -22,6 +22,10 @@ const Layout: FC = ({children, title = 'This is the default title'}: Props) => {
                         <a>Home</a>
                     </Link>{' '}
                     |{' '}
+                    <Link href="/post/create-post">
+                        <a>Create post</a>
+                    </Link>{' '}
+                    |{' '}
                     <Link href="/about">
                         <a>About</a>
                     </Link>{' '}

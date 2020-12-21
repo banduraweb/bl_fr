@@ -30,7 +30,8 @@ const theme: DefaultTheme = {
             secondary: 'rgba(0, 0, 0, 0.54)',
             disabled: 'rgba(0, 0, 0, 0.38)',
             hint: 'rgba(0, 0, 0, 0.38)',
-            divider: 'rgba(0, 0, 0, 0.12)'
+            divider: 'rgba(0, 0, 0, 0.12)',
+            grey: 'rgb(224,224,224)'
         },
         primary: {
             light: '#757ce8',

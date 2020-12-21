@@ -1,6 +1,6 @@
 export interface Comment {
-    id: string,
-    postId: string,
+    id?: string,
+    postId: string | number,
     body: string
 }
 
@@ -9,10 +9,10 @@ export type CommentList = {
 }
 
 export interface Post {
-    id: string,
+    id?: string,
     title: string,
     body: string,
-    comments: Comment[]
+    comments?: Comment[]
 }
 
 export type PostList = {

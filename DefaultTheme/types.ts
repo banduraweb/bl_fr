@@ -23,7 +23,8 @@ declare module 'styled-components' {
                 secondary: string,
                 disabled: string,
                 hint: string,
-                divider: string
+                divider: string,
+                grey: string,
             },
             primary: {
                 light: string,

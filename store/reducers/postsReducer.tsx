@@ -1,4 +1,5 @@
 import {
+    ADD_COMMENT_TO_CURRENT_POST,
     CLEAR_ERROR_LOADING_POSTS,
     ERROR_LOADING_POSTS, PostsDispatchTypes,
     SAVE_POSTS,
@@ -26,7 +27,6 @@ const postsReducer = (state: InitStateI = initState , action: PostsDispatchTypes
         case SAVE_POSTS:
             const {payload} = action;
             return {
-                hasErrors: false, loading: false,
                 ...state,
                 posts: payload
             };
@@ -54,7 +54,24 @@ const postsReducer = (state: InitStateI = initState , action: PostsDispatchTypes
                 ...state,
                 hasErrors: false,
             };
+        case ADD_COMMENT_TO_CURRENT_POST:
+            const {comment} = action;
+            return {
+                ...state,
+                //@ts-ignore
+                posts: state.posts.map(post=>{
+                    //@ts-ignore
+                    if(post.id === comment.postId) {
+                        return {
+                            ...post,
+                            comments: [...post.comments, comment]
+                        }
+                    } else {
+                        return post
+                    }
+                })
 
+            };
         default:
             return {...state};
     }
