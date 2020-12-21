@@ -5,7 +5,7 @@ import PostItem from "../../components/PostItem";
 import styled from "styled-components";
 import {postComment} from "../../store/actions/postsActions";
 
-const PostList = () => {
+const PostList = (): JSX.Element => {
     const {posts, loading} = useSelector(state => state.posts);
 
     const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const PostList = () => {
     return (
         <Layout>
             <Wrapper>
-                {posts.map((item, idx) => (
+                {posts && !!posts.length && posts.sort((a,b)=>b.id - a.id).map((item, idx) => (
                   <PostItem
                       post={item}
                       idx={idx}

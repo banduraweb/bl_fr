@@ -1,4 +1,4 @@
-import React, {ReactNode} from 'react'
+import React from 'react'
 import dynamic from "next/dynamic";
 
 const ReactQuill = dynamic(() => import("react-quill"), {ssr: false});
@@ -20,7 +20,7 @@ type Props = {
     comments?: Comment[]
 }
 
-const FormPost = (props: Props) => {
+const FormPost = (props: Props): JSX.Element => {
     const {loading,  Submit, handleChange, mode, title, body} = props;
 
     return (

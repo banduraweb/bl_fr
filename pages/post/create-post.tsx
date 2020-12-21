@@ -13,7 +13,7 @@ const initFields: GenericObject = {
     body: ""
 };
 
-const CreatePost = () => {
+const CreatePost = (): JSX.Element => {
     const [formFields, setFormFields] = useState(initFields);
     const {loading} = useSelector(state => state.posts);
     const dispatch = useDispatch();

@@ -1,7 +1,11 @@
 import React from 'react';
 import {MSG} from "../../shared";
 
-const Success = ({ message }) => {
+type Props = {
+    message: string
+}
+
+const Success = ({ message }: Props): JSX.Element => {
     return (
         <>
             <MSG>{message}</MSG>

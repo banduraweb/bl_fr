@@ -1,7 +1,7 @@
 
 import {Dispatch} from "redux";
 import postsService from "../../services/posts.servises";
-import {PostList} from "../../types/types";
+import {Post, PostList} from "../../types/types";
 import Notification from "../../services/notifier.service";
 
 //Action Types
@@ -114,7 +114,7 @@ export const postComment = (comment) => async (dispatch: Dispatch<PostsDispatchT
     }
 };
 
-export const postPost = (post) => async (dispatch: Dispatch<PostsDispatchTypes>) => {
+export const postPost = (post: Post) => async (dispatch: Dispatch<PostsDispatchTypes>) => {
     try {
         dispatch(clearErrorLoading());
         dispatch(startLoading());

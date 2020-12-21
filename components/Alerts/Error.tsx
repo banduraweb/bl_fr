@@ -1,7 +1,11 @@
 import React from 'react';
-import {MSG} from "../../shared";
+import {MSG} from "../../shared"
 
-const Error = ({ message }) => {
+type Props = {
+    message: string
+}
+
+const Error = ({ message }:Props): JSX.Element => {
   return (
     <>
       <MSG>{message}</MSG>

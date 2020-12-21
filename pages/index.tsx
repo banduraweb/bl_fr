@@ -1,7 +1,7 @@
 import React from 'react';
 import PostList from './postsList/index'
 import {fetchPosts} from "../store/actions/postsActions";
-function HomePage() {
+function HomePage(): JSX.Element {
     return (
         <PostList/>
     )

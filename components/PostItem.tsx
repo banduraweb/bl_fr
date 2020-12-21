@@ -14,8 +14,8 @@ type Props = {
     loading: boolean
 }
 
-const PostItem = (props: Props) => {
-    const {post, handleSubmitComment, loading, idx} = props;
+const PostItem = (props: Props): JSX.Element => {
+    const {post, handleSubmitComment, loading} = props;
 
     const initIdentity = doTags(post.body, 2);
     // @ts-ignore

@@ -11,7 +11,7 @@ import {
 } from "../../../store/actions/currentPostActions";
 import { useRouter } from 'next/router';
 
-const updateCurrentPost = () => {
+const updateCurrentPost = (): JSX.Element => {
 
     const {title, id, body, comments} = useSelector(state => state.currentPost.post);
     const {loading} = useSelector(state => state.currentPost);

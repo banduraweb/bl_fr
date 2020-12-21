@@ -45,7 +45,7 @@ export interface IEditCurrentPost {
 
 
 //Action Creator
-export const saveCurrentPost = (data): ISaveCurrentPost => ({
+export const saveCurrentPost = (data: Post): ISaveCurrentPost => ({
     type: SAVE_CURRENT_POST,
     post: data,
 });
@@ -66,7 +66,7 @@ export const clearErrorLoading = (): IClearErrorsLoading => ({
     type: CLEAR_ERROR_LOADING_POST,
 });
 
-export const editCurrentPost = (target): IEditCurrentPost => ({
+export const editCurrentPost = (target: HTMLElement): IEditCurrentPost => ({
     type: EDIT_CURRENT_POST_DATA,
     target,
 });
@@ -94,7 +94,7 @@ export const fetchCurrentPost = (id: string) => async (dispatch: Dispatch<curren
     }
 };
 
-export const UpdateCurrentPost = (id: string, body) => async (dispatch: Dispatch<currentPostDispatchTypes>) => {
+export const UpdateCurrentPost = (id: string, body: Post) => async (dispatch: Dispatch<currentPostDispatchTypes>) => {
     try {
         dispatch(clearErrorLoading());
         dispatch(startLoading());
