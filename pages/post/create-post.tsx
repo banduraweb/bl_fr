@@ -20,6 +20,7 @@ const CreatePost = (): JSX.Element => {
 
     const Submit = async (e) => {
         e.preventDefault();
+        //@ts-ignore
         await dispatch(postPost(formFields));
         await setFormFields(initFields)
     };
