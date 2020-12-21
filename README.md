@@ -1,5 +1,5 @@
 # blogs 
-[DEMO](https://bl-fr-7rj5u14d8.vercel.app/) 
+[DEMO](https://bl-fr.vercel.app/) 
 
 # FrontEnd
 ##  Install dependencies:
