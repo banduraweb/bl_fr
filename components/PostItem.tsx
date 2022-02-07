@@ -7,6 +7,7 @@ import {Post} from "../types/types";
 import {doTags} from "../helpers";
 import Parser from 'html-react-parser';
 
+
 type Props = {
     post: Post,
     idx: number,
